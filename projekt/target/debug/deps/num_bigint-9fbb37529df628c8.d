@@ -1,0 +1,12 @@
+/home/karol/Programowanie/Rust_project/projekt/target/debug/deps/num_bigint-9fbb37529df628c8.rmeta: /home/karol/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.1.44/src/lib.rs /home/karol/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.1.44/src/macros.rs /home/karol/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.1.44/src/biguint.rs /home/karol/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.1.44/src/algorithms.rs /home/karol/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.1.44/src/monty.rs /home/karol/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.1.44/src/bigint.rs
+
+/home/karol/Programowanie/Rust_project/projekt/target/debug/deps/libnum_bigint-9fbb37529df628c8.rlib: /home/karol/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.1.44/src/lib.rs /home/karol/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.1.44/src/macros.rs /home/karol/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.1.44/src/biguint.rs /home/karol/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.1.44/src/algorithms.rs /home/karol/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.1.44/src/monty.rs /home/karol/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.1.44/src/bigint.rs
+
+/home/karol/Programowanie/Rust_project/projekt/target/debug/deps/num_bigint-9fbb37529df628c8.d: /home/karol/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.1.44/src/lib.rs /home/karol/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.1.44/src/macros.rs /home/karol/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.1.44/src/biguint.rs /home/karol/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.1.44/src/algorithms.rs /home/karol/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.1.44/src/monty.rs /home/karol/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.1.44/src/bigint.rs
+
+/home/karol/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.1.44/src/lib.rs:
+/home/karol/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.1.44/src/macros.rs:
+/home/karol/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.1.44/src/biguint.rs:
+/home/karol/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.1.44/src/algorithms.rs:
+/home/karol/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.1.44/src/monty.rs:
+/home/karol/.cargo/registry/src/github.com-1ecc6299db9ec823/num-bigint-0.1.44/src/bigint.rs:

@@ -1,0 +1,1 @@
+/home/karol/Programowanie/Rust_project/projekt/target/debug/projekt: /home/karol/Programowanie/Rust_project/projekt/src/knn.rs /home/karol/Programowanie/Rust_project/projekt/src/main.rs /home/karol/Programowanie/Rust_project/projekt/src/record.rs
