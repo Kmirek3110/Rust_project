@@ -9,6 +9,7 @@ mod knn;
 use record::read_records;
 use record::Record;
 
+
 use std::fs::File;
 use std::io::prelude::*;
 
@@ -22,9 +23,10 @@ fn main() {
     let mut file = File::open("in.txt").expect("Cant open file");
     let mut contents = String::new();
     file.read_to_string(&mut contents).expect("cant cos");
-    println!("{}",contents);
+    let mut test = Record::from_line(&contents);
     
-    //knn::knn_classifer(records);
+    
+    println!("{:?}",knn::knn_classifer(records, test, 5));
     
 }
 

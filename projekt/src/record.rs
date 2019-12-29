@@ -46,3 +46,21 @@ pub fn read_records(input: &[String]) -> Vec<Record>{
     }
     records
 }
+pub fn test_record(line: &str)-> Record{
+    let mut data = line.split(',');
+    Record{
+        fixed_acid: data.next().and_then(|n| n.trim().replace("\"","").parse::<f32>().ok()).unwrap_or_default().to_owned(),
+        volatile_acid: data.next().and_then(|n| n.trim().replace("\"","").parse::<f32>().ok()).unwrap_or_default().to_owned(),
+        citric_acid: data.next().and_then(|n| n.trim().replace("\"","").parse::<f32>().ok()).unwrap_or_default().to_owned(),
+        residual_sugar: data.next().and_then(|n| n.trim().replace("\"","").parse::<f32>().ok()).unwrap_or_default().to_owned(),
+        chlorides: data.next().and_then(|n| n.trim().replace("\"","").parse::<f32>().ok()).unwrap_or_default().to_owned(),
+        free_sulfur_diox: data.next().and_then(|n| n.trim().replace("\"","").parse::<i32>().ok()).unwrap_or_default().to_owned(),
+        total_sulfur_diox: data.next().and_then(|n| n.trim().replace("\"","").parse::<i32>().ok()).unwrap_or_default().to_owned(),
+        density: data.next().and_then(|n| n.trim().replace("\"","").parse::<f32>().ok()).unwrap_or_default().to_owned(),
+        ph: data.next().and_then(|n| n.trim().replace("\"","").parse::<f32>().ok()).unwrap_or_default().to_owned(),
+        sulphates: data.next().and_then(|n| n.trim().replace("\"","").parse::<f32>().ok()).unwrap_or_default().to_owned(),
+        alcohol: data.next().and_then(|n| n.trim().replace("\"","").parse::<f32>().ok()).unwrap_or_default().to_owned(),
+        quality: data.next().and_then(|n| n.trim().replace("\"","").parse::<i32>().ok()).unwrap_or_default().to_owned(),
+
+    }
+}
