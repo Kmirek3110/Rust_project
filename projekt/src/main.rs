@@ -23,7 +23,7 @@ fn main() {
     let mut file = File::open("in.txt").expect("Cant open file");
     let mut contents = String::new();
     file.read_to_string(&mut contents).expect("cant cos");
-    let mut test = Record::from_line(&contents);
+    let test = Record::from_line(&contents);
     
     
     println!("{:?}",knn::knn_classifer(records, test, 5));
