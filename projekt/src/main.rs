@@ -25,8 +25,10 @@ fn main() {
     file.read_to_string(&mut contents).expect("cant cos");
     let test = Record::from_line(&contents);
     
+    for i in vec![1,3,5,7,9,11,13]{
+        println!("{:?}",knn::knn_classifer(&records, &test, i));
+    }
     
-    println!("{:?}",knn::knn_classifer(records, test, 5));
     
 }
 
