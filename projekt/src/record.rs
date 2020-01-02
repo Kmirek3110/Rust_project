@@ -35,6 +35,10 @@ impl Record{
 
         }
     }
+    pub fn fixed_acid(self)-> f32{
+        self.fixed_acid
+
+    }
 }
 
 pub fn read_records(input: &[String]) -> Vec<Record>{

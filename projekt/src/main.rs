@@ -2,14 +2,16 @@
 extern crate csv;
 extern crate chrono;
 extern crate grabinput;
+extern crate linreg;
 
 mod record;
 mod knn;
+mod reg;
 
 use record::read_records;
 use record::Record;
 
-
+use reg::check_reg_lin;
 use std::fs::File;
 use std::io::prelude::*;
 
@@ -28,6 +30,7 @@ fn main() {
     for i in vec![1,3,5,7,9,11,13]{
         println!("{:?}",knn::knn_classifer(&records, &test, i));
     }
+    check_reg_lin(&records,"fixed_acid".to_string());
     
     
 }
