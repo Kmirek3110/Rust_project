@@ -1,0 +1,1 @@
+Some sort of hashmap which will conect each field of struct to function becouse i cant iterate over fields of struct :C 
