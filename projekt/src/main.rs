@@ -30,7 +30,7 @@ fn main() {
     for i in vec![1,3,5,7,9,11,13]{
         println!("{:?}",knn::knn_classifer(&records, &test, i));
     }
-    check_reg_lin(&records,"fixed_acid".to_string());
+    println!("{:?}",check_reg_lin(&records,"alcohol".to_string()));
     
     
 }
