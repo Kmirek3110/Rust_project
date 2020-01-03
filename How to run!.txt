@@ -1,4 +1,4 @@
 cargo build
 cargo run winequality-white.csv
 
-note// u can change values in in.txt for diffrent knn results
+note// u can change values in in.txt for different knn results
