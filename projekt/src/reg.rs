@@ -1,6 +1,6 @@
  
 extern crate linreg;
-use linreg::{linear_regression, linear_regression_of};
+use linreg::{linear_regression};
 use crate::record::Record;
 
 pub fn check_reg_lin(cos :&Vec<Record>, fieldname: String)->(f64,f64){

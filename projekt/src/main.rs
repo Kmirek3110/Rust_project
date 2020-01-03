@@ -30,6 +30,16 @@ fn main() {
     for i in vec![1,3,5,7,9,11,13]{
         println!("{:?}",knn::knn_classifer(&records, &test, i));
     }
+    println!("{:?}",check_reg_lin(&records,"fixed_acid".to_string()));
+    println!("{:?}",check_reg_lin(&records,"volatile_acid".to_string()));
+    println!("{:?}",check_reg_lin(&records,"citric_acid".to_string()));
+    println!("{:?}",check_reg_lin(&records,"residual_sugar".to_string()));
+    println!("{:?}",check_reg_lin(&records,"chlorides".to_string()));
+    println!("{:?}",check_reg_lin(&records,"free_sulfur_diox".to_string()));
+    println!("{:?}",check_reg_lin(&records,"total_sulfur_diox".to_string()));
+    println!("{:?}",check_reg_lin(&records,"density".to_string()));
+    println!("{:?}",check_reg_lin(&records,"ph".to_string()));
+    println!("{:?}",check_reg_lin(&records,"sulphates".to_string()));
     println!("{:?}",check_reg_lin(&records,"alcohol".to_string()));
     
     

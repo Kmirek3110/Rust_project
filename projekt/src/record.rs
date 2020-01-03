@@ -21,15 +21,15 @@ impl Record{
         
         Record{
             fixed_acid: data.next().and_then(|n| n.trim().replace("\"","").parse::<f32>().ok()).unwrap_or_default().to_owned(),
-            volatile_acid: data.next().and_then(|n| n.trim().replace("\"","").parse::<f32>().ok()).unwrap_or_default().to_owned(),
-            citric_acid: data.next().and_then(|n| n.trim().replace("\"","").parse::<f32>().ok()).unwrap_or_default().to_owned(),
+            volatile_acid: data.next().and_then(|n| n.trim().replace("\"","").parse::<f32>().ok()).unwrap_or_default().to_owned()*10.0,
+            citric_acid: data.next().and_then(|n| n.trim().replace("\"","").parse::<f32>().ok()).unwrap_or_default().to_owned()*10.0,
             residual_sugar: data.next().and_then(|n| n.trim().replace("\"","").parse::<f32>().ok()).unwrap_or_default().to_owned(),
-            chlorides: data.next().and_then(|n| n.trim().replace("\"","").parse::<f32>().ok()).unwrap_or_default().to_owned(),
-            free_sulfur_diox: data.next().and_then(|n| n.trim().replace("\"","").parse::<i32>().ok()).unwrap_or_default().to_owned(),
-            total_sulfur_diox: data.next().and_then(|n| n.trim().replace("\"","").parse::<i32>().ok()).unwrap_or_default().to_owned(),
-            density: data.next().and_then(|n| n.trim().replace("\"","").parse::<f32>().ok()).unwrap_or_default().to_owned(),
+            chlorides: data.next().and_then(|n| n.trim().replace("\"","").parse::<f32>().ok()).unwrap_or_default().to_owned()*100.0,
+            free_sulfur_diox: data.next().and_then(|n| n.trim().replace("\"","").parse::<i32>().ok()).unwrap_or_default().to_owned()/10,
+            total_sulfur_diox: data.next().and_then(|n| n.trim().replace("\"","").parse::<i32>().ok()).unwrap_or_default().to_owned()/10,
+            density: data.next().and_then(|n| n.trim().replace("\"","").parse::<f32>().ok()).unwrap_or_default().to_owned()*10.0,
             ph: data.next().and_then(|n| n.trim().replace("\"","").parse::<f32>().ok()).unwrap_or_default().to_owned(),
-            sulphates: data.next().and_then(|n| n.trim().replace("\"","").parse::<f32>().ok()).unwrap_or_default().to_owned(),
+            sulphates: data.next().and_then(|n| n.trim().replace("\"","").parse::<f32>().ok()).unwrap_or_default().to_owned()*10.0,
             alcohol: data.next().and_then(|n| n.trim().replace("\"","").parse::<f32>().ok()).unwrap_or_default().to_owned(),
             quality: data.next().and_then(|n| n.trim().replace("\"","").parse::<i32>().ok()).unwrap_or_default().to_owned(),
 
