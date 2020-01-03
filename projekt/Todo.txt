@@ -1,1 +1,2 @@
-Some sort of hashmap which will conect each field of struct to function becouse i cant iterate over fields of struct :C 
+Some sort of hashmap which will conect each field of struct to function becouse i cant iterate over fields of struct :C (failed but workaround)
+Connect somehow linear reg with knn and go to sleep
