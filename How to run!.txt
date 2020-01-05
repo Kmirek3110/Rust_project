@@ -1,4 +1,6 @@
 cargo build
 cargo run winequality-white.csv
 
+
+Nie otwierać z konsoli z poziomu Vsc tylko normalnie z terminala bo jest interaktywna teraz
 note// u can change values in in.txt for different knn results
