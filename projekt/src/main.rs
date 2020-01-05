@@ -35,20 +35,49 @@ fn main() {
     let fields = vec!["fixed_acid","volatile_acid","citric_acid","residual_sugar","chlorides"
     ,"free_sulfur_diox","total_sulfur_diox","density","ph","sulphates","alcohol"];
     println!("{}","Współczynniki do danych atrybutów (regresja liniowa)");
-    for item in fields{
-        println!("{}{}{:?}",item,": ",check_reg_lin(&records,item.to_string()));
+    let mut coef = Vec::new();
+    for (i,item) in fields.iter().enumerate(){
+        println!("{}{}{}{}{:?}",i,",",item,": ",check_reg_lin(&records,item.to_string()));
+        coef.push(check_reg_lin(&records,item.to_string()));
     }
     let mut input = String::new();
 
-    println!("{}","Po czym klasyfikowac podaj jedno pole?");
+    println!("{}","Wybierz numer?");
+
     match io::stdin().read_line(&mut input){
         Ok(_) => {
-            println!("{}{:?}","Klasa jakości: ", knn::select_knn(&records,&test, input));
-            },
+            let num: i32 = input[..input.len()-1].parse().unwrap();
+            let fom : String = match_number(&num); 
+            println!("{}{}","Wybrałeś pole: ",fom);
+            if fom != "bład"{
+                println!("{}{:?}","Klasa jakości: ", knn::select_knn(&records,&test, fom, coef[num as usize].0));
+            }
+            else
+                {println!("{}","Zły input");}
+        } 
+            ,
         Err(_e) => { println!("{}","Blad"); }
 
     }   
     
     
+}
+
+pub fn match_number(num :&i32)-> String
+{
+    match num{
+       0 => "fixed_acid",
+       1 => "volatile_acid",
+       2 => "citric_acid",
+       3 => "residual_sugar",
+       4 => "chlorides",
+       5 => "free_sulfur_diox",
+       6 => "total_sulfur_diox",
+       7 => "density",
+       8 => "ph",
+       9 => "sulphates",
+       10 => "alcohol",
+       _ => "bład"     
+    }.to_string()
 }
 

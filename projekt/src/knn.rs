@@ -39,14 +39,13 @@ pub fn knn_classifer(dane: &Vec<Record>, test:&Record, num_of_neigh:i32)->i32{
     println!("{:?}",closest_n_dist);
     class(&closest_n_dist)
 }
-pub fn select_knn(dane: &Vec<Record>, test:&Record, pole:String)-> i32{
+pub fn select_knn(dane: &Vec<Record>, test:&Record, pole:String, coef: f64)-> i32{
     
     fn euclidean_distance_s(test: &Record, elem: &Record, pole :&String)->f32{
         
         
         let wynik : f32 ;
-        
-        match &pole[..pole.len()-1]{
+        match &pole[..]{
             "fixed_acid" => wynik =   (test.fixed_acid - elem.fixed_acid).powf(2.0),
             "volatile_acid"  => wynik =  (test.volatile_acid - elem.volatile_acid).powf(2.0),
             "citric_acid"  => wynik =  (test.citric_acid - elem.citric_acid).powf(2.0),
@@ -66,7 +65,8 @@ pub fn select_knn(dane: &Vec<Record>, test:&Record, pole:String)-> i32{
     let mut closest_n_dist:Vec<(f32,i32)> = vec![(999.9,0);7 as usize];
     let mut dana = BTreeMap::new();
     for elem in dane{
-        let dist = euclidean_distance_s(&test, &elem, &pole);
+        let mut dist = euclidean_distance_s(&test, &elem, &pole);
+        dist *= coef as f32;    
         let max = closest_n_dist.iter().max_by(|x,y| x.0.partial_cmp(&y.0).unwrap()).unwrap().0;
         *dana.entry(dist.to_string()).or_insert(0) += 1;
         if dist < max
